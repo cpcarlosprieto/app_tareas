@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Usuarios</title>
+    <!-- Enlaces a las bibliotecas de Bootstrap (CSS) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_users.css') }}">
+</head>
+
+<body>
+    <!-- Contenedor principal -->
+    <div class="container">
+        <h1>Lista de Usuarios</h1>
+        <!-- Sección condicional para mostrar la tabla de usuarios o un mensaje si no hay usuarios -->
+        {% if users %}
+        <!-- Tabla que muestra la información de los usuarios -->
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <!-- Encabezados de la tabla -->
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Apellidos</th>
+                    <th>Email</th>
+                    <th>Contraseña</th>
+                    <th>Rol</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Ciclo para recorrer la lista de usuarios y mostrar cada uno en una fila de la tabla -->
+                {% for user in users %}
+                <tr>
+                    <!-- Celdas con la información de cada usuario -->
+                    <td>{{ user['id'] }}</td>
+                    <td>{{ user['name'] }}</td>
+                    <td>{{ user['surnames'] }}</td>
+                    <td>{{ user['email'] }}</td>
+                    <td>{{ user['password'] }}</td>
+                    <td>{{ user['role'] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% else %}
+        <!-- Mensaje a mostrar si no hay usuarios registrados -->
+        <p>No hay usuarios registrados.</p>
+        {% endif %}
+    </div>
+    <!-- Enlace para regresar a la página de tareas -->
+    <a href="{{ url_for('tasks') }}" class="btn btn-primary">Regresar a Task</a>
+</body>
+
+</html>

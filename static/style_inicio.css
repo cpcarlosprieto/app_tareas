@@ -1,0 +1,59 @@
+/* Estilo del fondo del cuerpo con un degradado de color */
+body {
+    background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+}
+
+/* Estilo para el contenido principal, que ocupa el 100% del alto de la ventana */
+main {
+    height: 100vh;
+}
+
+/* Estilo de una tarjeta con sombra, borde redondeado y sin borde */
+.card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo del cuerpo de la tarjeta con relleno */
+.card-body {
+    padding: 2rem;
+}
+
+/* Estilo del formulario con ancho máximo y centrado en la página */
+form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* Estilo del encabezado h3  */
+h3 {
+    color: #007bff;
+}
+
+/* Estilo del subencabezado h5  */
+h5 {
+    color: #6c757d;
+}
+
+/* Estilo de las etiquetas  */
+label {
+    color: #495057;
+}
+
+/* Estilo del botón acceder */
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+/* Estilo del botón acceder al pasar el mouse sobre él */
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+/* Estilo de las alertas con margen superior */
+.alert {
+    margin-top: 1rem;
+}

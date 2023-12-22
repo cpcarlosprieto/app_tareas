@@ -1,0 +1,57 @@
+/* Estilo del fondo del cuerpo con un degradado de color */
+body {
+    background: #73C8A9;
+    background: -webkit-linear-gradient(to right, #373B44, #73C8A9);
+    background: linear-gradient(to right, #373B44, #73C8A9);
+}
+
+/* Estilo del contenedor con margen superior */
+.container {
+    margin-top: 50px;
+}
+
+/* Estilo del encabezado h1 */
+h1 {
+    color: #007bff;
+}
+
+/* Estilo de la tabla con fondo blanco */
+.table {
+    background-color: #fff;
+}
+
+/* Estilo de las celdas de la tabla y los encabezados centrados */
+th,
+td {
+    text-align: center;
+}
+
+/* Estilo del encabezado de la tabla */
+th {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Estilo del botón regresar  */
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+/* Estilo del botón regresar al pasar el mouse sobre él */
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+/* Estilo del botón de eliminar  */
+.btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+/* Estilo del botón de eliminar al pasar el mouse sobre él */
+.btn-danger:hover {
+    background-color: #bd2130;
+    border-color: #bd2130;
+}
